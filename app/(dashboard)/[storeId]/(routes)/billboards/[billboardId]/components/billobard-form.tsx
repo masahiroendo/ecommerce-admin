@@ -81,9 +81,9 @@ export function BillboardForm({ initialData }: BillboardFormProps) {
       await axios.delete(
         `/api/${params.storeId}/billboards/${params.billboardId}`
       );
-      router.refresh();
-      router.push("/");
       toast.success("Billboard deleted");
+      router.refresh();
+      router.push(`/${params.storeId}/billboards`);
     } catch (error) {
       toast.error(
         "Make sure you removed all ategories using this billboard first."
@@ -162,7 +162,6 @@ export function BillboardForm({ initialData }: BillboardFormProps) {
           </Button>
         </form>
       </Form>
-      <Separator />
     </>
   );
 }

@@ -2,14 +2,16 @@
 
 import { Plus } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
-import { Billboard } from "@prisma/client";
 
 import { Heading } from "@/components/ui/heading";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { BillboardColumn, columns } from "./columns";
+import { DataTable } from "@/components/ui/data-table";
+import { Apilist } from "@/components/ui/api-list";
 
 type BillboardsClientProps = {
-  data: Billboard[];
+  data: BillboardColumn[];
 };
 
 export function BillboardClient({ data }: BillboardsClientProps) {
@@ -30,6 +32,9 @@ export function BillboardClient({ data }: BillboardsClientProps) {
         </Button>
       </div>
       <Separator />
+      <DataTable columns={columns} data={data} searchKey="label" />
+      <Heading title="API" description="API calls for Billboards" />
+      <Apilist entityName="billboards" entityIdName="billboardId" />
     </>
   );
 }
