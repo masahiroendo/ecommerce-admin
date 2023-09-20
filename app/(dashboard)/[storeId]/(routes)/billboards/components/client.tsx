@@ -10,11 +10,11 @@ import { BillboardColumn, columns } from "./columns";
 import { DataTable } from "@/components/ui/data-table";
 import { Apilist } from "@/components/ui/api-list";
 
-type BillboardsClientProps = {
+type BillboardClientProps = {
   data: BillboardColumn[];
 };
 
-export function BillboardClient({ data }: BillboardsClientProps) {
+export function BillboardClient({ data }: BillboardClientProps) {
   const router = useRouter();
   const params = useParams();
   return (
