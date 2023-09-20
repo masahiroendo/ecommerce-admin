@@ -34,7 +34,7 @@ export function CellAction({ data }: CellActionProps) {
       router.refresh();
     } catch (error) {
       toast.error(
-        "Make sure you removed all ategories using this billboard first."
+        "Make sure you removed all categories using this billboard first."
       );
       setLoading(false);
       setOpen(false);
