@@ -32,7 +32,7 @@ import {
 } from "@/components/ui/select";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "please enter a category name" }),
+  name: z.string().min(2, { message: "Please enter a category name" }),
   billboardId: z.string().min(1),
 });
 

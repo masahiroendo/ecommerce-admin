@@ -26,7 +26,7 @@ import { AlertModal } from "@/components/modals/alert-modal";
 import ImageUpload from "@/components/ui/image-upload";
 
 const formSchema = z.object({
-  label: z.string().min(2, { message: "please enter a billboard name" }),
+  label: z.string().min(2, { message: "Please enter a billboard name" }),
   imageUrl: z.string().min(1),
 });
 

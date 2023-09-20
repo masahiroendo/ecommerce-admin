@@ -23,10 +23,9 @@ import {
 import { Input } from "@/components/ui/input";
 import toast from "react-hot-toast";
 import { AlertModal } from "@/components/modals/alert-modal";
-import ImageUpload from "@/components/ui/image-upload";
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "please enter a size name" }),
+  name: z.string().min(2, { message: "Please enter a size name" }),
   value: z.string().min(1),
 });
 
@@ -83,9 +82,7 @@ export function SizeForm({ initialData }: SizeFormProps) {
       router.refresh();
       router.push(`/${params.storeId}/sizes`);
     } catch (error) {
-      toast.error(
-        "Make sure you removed all categories using this size first."
-      );
+      toast.error("Make sure you removed all products using this size first.");
       setLoading(false);
       setOpen(false);
     }
